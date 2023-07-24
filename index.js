@@ -12,9 +12,6 @@ app.use(express.json());
 
 
 
-// collageAdmission
-// collage
-
 
 const uri = `mongodb+srv://${process.env.MONGO_USER}:${process.env.MONGO_PASS}@cluster0.czi3ubs.mongodb.net/?retryWrites=true&w=majority`;
 // Create a MongoClient with a MongoClientOptions object to set the Stable API version
@@ -30,7 +27,6 @@ async function run() {
     try {
         console.log("Pinged your deployment. You successfully connected to MongoDB!");
 
-        const userscollection = client.db("Collage-Admision").collection("users");
         const CollageCollection = client.db("collageAdmission").collection("collage");
         const admissionInfo = client.db("collageAdmission").collection("admission");
 
